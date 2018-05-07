@@ -28,6 +28,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
 import { BgTask } from '../providers/bg-task';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { CallNumber } from '@ionic-native/call-number';
 
 
 // import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
@@ -84,7 +85,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     BackgroundMode,
     BLE,
     BgTask,
-    LocalNotifications
+    LocalNotifications,
+    CallNumber
   ]
 })
 export class AppModule { }

@@ -6,7 +6,6 @@ import { TabsPage } from '../tabs/tabs';
 import { DOCUMENT } from '@angular/platform-browser';
 import { LoginProvider } from '../../providers/login/login';
 import { Common } from '../../providers/common';
-import { ENV } from '@environment';
 
 
 /**

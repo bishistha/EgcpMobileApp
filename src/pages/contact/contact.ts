@@ -5,7 +5,7 @@ import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
 import { BLE } from '@ionic-native/ble';
 import { AlertController } from 'ionic-angular';
 import { DeviceDataProvider } from '../../providers/device-data';
-import { Device } from '@ionic-native/device';
+// import { Device } from '@ionic-native/device';
 
 @Component({
   selector: 'page-home',
@@ -18,7 +18,7 @@ export class ContactPage {
   pairedDevices: any;
   gettingDevices: Boolean;
   payload: String = null;
-  deviceList: Device[] = null;
+  // deviceList: Device[] = null;
 
   constructor(private bluetoothSerial: BluetoothSerial, private alertCtrl: AlertController, private deviceDataProvider: DeviceDataProvider) {
     bluetoothSerial.enable();

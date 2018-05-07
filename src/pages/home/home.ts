@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { LoginPage } from '../login/login'
 import { Common } from '../../providers/common'
-import { PushObject, PushOptions } from '@ionic-native/push';
+// import { PushObject, PushOptions } from '@ionic-native/push';
 import { Platform } from 'ionic-angular';
 import { DeviceDataProvider } from '../../providers/device-data';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { CallNumber } from '@ionic-native/call-number';
+
 
 @Component({
   selector: 'page-home',
@@ -23,7 +25,8 @@ export class HomePage {
     private loadingController: LoadingController,
     private alertCtrl: AlertController,
     public deviceDataProvider: DeviceDataProvider,
-    private localNotification: LocalNotifications) {
+    private localNotification: LocalNotifications,
+    private callNumber: CallNumber) {
 
     this.data = this.deviceDataProvider.getData();
     
@@ -70,6 +73,18 @@ export class HomePage {
 
   ionViewDidLoad() {
 
+  }
+
+  callPolice(){
+    if(this.callNumber.isCallSupported()){
+      this.callNumber.callNumber("911", true);
+    } else {
+      let alert = this.alertCtrl.create({
+        title: "Error",
+        subTitle: "Couldn't Call."
+      });
+      alert.present();
+    }
   }
 
 

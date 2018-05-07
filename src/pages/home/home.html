@@ -38,7 +38,7 @@
   </ion-card-content>
 
 
-  <div class="list-cards">
+  <!-- <div class="list-cards">
     <div>
       <ion-card>
         <ion-card-content>
@@ -49,22 +49,18 @@
           </div>
         </ion-card-content>
       </ion-card>
-    </div>
+    </div> 
     <div>
-      <ion-card>
-        <ion-card-content>
-          <div class="list-content">
-            <ion-icon name="calendar"></ion-icon>
-            <br>
-            <button class="bottom-buttons">Alert 911 </button>
-          </div>
-        </ion-card-content>
-      </ion-card>
+      <button ion-button full>Call 911 </button>
     </div>
+  </div> -->
+
+  <div>
+    <button ion-button full (click)="callPolice()">Call 911 </button>
   </div>
 
   <div>
-    <button ion-button full (click)= "scheduleNotification()">Notify</button>
+    <button ion-button full (click)="scheduleNotification()">Notify</button>
   </div>
 
 
