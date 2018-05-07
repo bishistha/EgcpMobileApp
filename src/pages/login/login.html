@@ -1,0 +1,46 @@
+<ion-content padding hide-tabs>
+
+  <ion-grid>
+    <ion-row>
+      <img class="logo">
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- <div class="hrLine"><span>Or</span></div> -->
+  <div>
+    <div class="loginInput">
+      <ion-input type="email" placeholder="Username" text-center [value]="usr" [(ngModel)]="usr"></ion-input>
+    </div>
+    <div class="loginInput">
+      <ion-input type="password" placeholder="Password" text-center [value]="pwd" [(ngModel)]="pwd"></ion-input>
+    </div>
+  </div>
+
+  <div>
+    <div class="item">
+      <ion-checkbox class="checkbox" name="isChecked" [(ngModel)]="isChecked"> </ion-checkbox>
+      <ion-label class="label">Remember Username</ion-label>
+    </div>
+  </div>
+
+  <button ion-button block round color="secondary" (click)="userLogin();" disabled={{privacyAccepted}} style="font-size:17px; min-height:10%; width:80%; margin-right:auto; margin-left:auto; margin-top:10%; margin-bottom:5% !important;">
+    Login
+  </button>
+
+
+
+  <!-- <div padding-top>
+
+    <button ion-button block color="light" clear (click)="forgotPassword();">Forgot Password?</button>
+
+  </div> -->
+
+  <!-- <div style ="display:block;padding-top:5%;font-size:15px;text-align:center;">
+    <span style="color:white;">Don't have an account? <a onclick="window.open('https://www.google.com/', '_system', 'location=yes');" style="color:#0999e1;"> Apply Now</a></span>
+</div>
+  <div style ="display:block;padding-top:5%;font-size:15px;text-align:center;">
+    <span style="color:white;">Forgot password? <a (click)="resetPassword();" style="color:#0999e1;">Click Here</a></span>
+</div> -->
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align:center;">
+      Connect
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+  <ion-list padding>
+
+    <button ion-button block (click)="startScanning()">scan</button>
+
+    <!-- <ion-list-header>
+      Paired Devices
+    </ion-list-header>
+
+    <ion-item *ngFor="let device of pairedDevices">
+      {{device.name}}
+    </ion-item> -->
+
+    <button ion-button block (click)="disconnect()">Disconnect</button>
+
+    <ion-list-header>
+      Availlable Devices
+    </ion-list-header>
+
+    <ion-item *ngFor='let device of unpairedDevices'>
+      <span (click)="selectDevice(device.address)">
+        <h2>{{ device.name || 'Unnamed'}}</h2>
+        <p>{{ device.id }}</p>
+        <p>{{ device.rssi }}</p>
+      </span>
+    </ion-item>
+
+    <ion-spinner name="crescent" *ngIf="gettingDevices"></ion-spinner>
+  </ion-list>
+
+
+
+
+</ion-content>

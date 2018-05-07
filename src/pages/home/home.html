@@ -1,14 +1,78 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Home Page</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-grid>
+    <ion-row>
+      <!-- <ion-title>Welcome!</ion-title> -->
+    </ion-row>
+  </ion-grid>
+
+  <ion-card-content>
+    <!-- <span class="title">Seated?</span> -->
+    <div class="title">Seated?
+      <div></div>Yes</div>
+    <div class="middle-section">
+      <div class="section">
+        <span>Temperature:</span>
+        <span>89C</span>
+      </div>
+      <div class="section">
+        <span>Motion:</span>
+        <span>Medium</span>
+      </div>
+      <div class="section">
+        <span>In Range?</span>
+        <span>Low signal</span>
+      </div>
+      <div class="section">
+        <span>data</span>
+        <span>{{data}}</span>
+      </div>
+    </div>
+
+  </ion-card-content>
+
+
+  <div class="list-cards">
+    <div>
+      <ion-card>
+        <ion-card-content>
+          <div class="list-content">
+            <ion-icon name="time"></ion-icon>
+            <br>
+            <button class="bottom-buttons"> History </button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div>
+      <ion-card>
+        <ion-card-content>
+          <div class="list-content">
+            <ion-icon name="calendar"></ion-icon>
+            <br>
+            <button class="bottom-buttons">Alert 911 </button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <div>
+    <button ion-button full (click)= "scheduleNotification()">Notify</button>
+  </div>
+
+
+  <!-- <iframe> -->
+  <!-- <a class="item" href="#" onclick="window.open('https://secure.na1.echosign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhBA6rP5dPYzwxPKB4EhMiIUArO1aFmNfj_5qpHe1WbbXiQ1bkOa4AHZEHWe6fjAIj4*&amp;hosted=false&amp;token=&amp;firstName=&amp;lastName=&amp;nameEditable=true', '_self', 'location=yes'); return false;">
+               Open a Browser
+           </a> -->
+  <!-- </iframe> -->
+  <!-- <iframe src="https://secure.na1.echosign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhBA6rP5dPYzwxPKB4EhMiIUArO1aFmNfj_5qpHe1WbbXiQ1bkOa4AHZEHWe6fjAIj4*&amp;hosted=false&amp;token=&amp;firstName=&amp;lastName=&amp;nameEditable=true" width="100%" height="100%" frameborder="0" style="border: 0; overflow: hidden; min-height: 500px; min-width: 300px;"></iframe> -->
+
 </ion-content>
