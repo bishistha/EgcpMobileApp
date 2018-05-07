@@ -6,8 +6,8 @@ import 'rxjs/add/operator/toPromise';
 export class Common {
   constructor() { }
   private baseApiUrl: string;
-  private baseUrlDev: string = 'http://appx.objectbrains.com:7070/mobile-api';
-  private baseUrlProd: string = 'https://ccc-mobile-api.objectbrains.com';
+  private baseUrlDev: string = '';
+  private baseUrlProd: string = '';
 
 
 
