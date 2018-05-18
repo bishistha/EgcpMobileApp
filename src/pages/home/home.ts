@@ -66,6 +66,27 @@ export class HomePage {
 
   }
 
+  scheduleNotificationForWarning() {
+    // events schedule, trigger, click, update, clear, clearall, cancel, cancelall
+    this.localNotification.schedule({
+      id: 1,
+      title: 'Attention!!!',
+      text: 'Child passanger still inside the vehicle',
+      trigger: { at: new Date(new Date().getTime() + 10000) },
+      data: { mydata: 'Car cabin has unsuitable condition for the passanger Child. Please return to your vehicle.'}
+    });
+
+    if(!this.platform.is('cordova')){
+      this.platform.ready().then((rdy) => {
+        this.localNotification.on('click').subscribe(
+          this.notify,
+          this.failure
+        );
+      });
+    }
+
+  }
+
   ionViewCanEnter() {
     //console.log("is logged in", this.borrowerProvider.getIsLogin());
 
