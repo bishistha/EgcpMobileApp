@@ -50,8 +50,8 @@ export class HomePage {
     this.localNotification.schedule({
       id: 1,
       title: 'Attention',
-      text: 'Delayed ILocalNotification',
-      trigger: { at: new Date(new Date().getTime() + 10000) },
+      text: 'Test notification',
+      trigger: { at: new Date(new Date().getTime()) },
       data: { mydata: 'This is a test notification'}
     });
 
@@ -72,7 +72,7 @@ export class HomePage {
       id: 1,
       title: 'Attention!!!',
       text: 'Child passanger still inside the vehicle',
-      trigger: { at: new Date(new Date().getTime() + 10000) },
+      trigger: { at: new Date(new Date().getTime() + 5000) },
       data: { mydata: 'Car cabin has unsuitable condition for the passanger Child. Please return to your vehicle.'}
     });
 
